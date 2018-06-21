@@ -15,22 +15,6 @@ void setPixel()
 {
    glClear(GL_COLOR_BUFFER_BIT);
    glPointSize(1.0);
-   /*glBegin(GL_LINES);
-   glVertex2i(10,10);
-   glVertex2i(50,10);
-   glEnd();
-   glBegin(GL_LINES);
-   glVertex2i(10,50);
-   glVertex2i(50,50);
-   glEnd();
-   glBegin(GL_LINES);
-   glVertex2i(50,50);
-   glVertex2i(50,10);
-   glEnd();
-   glBegin(GL_LINES);
-   glVertex2i(10,50);
-   glVertex2i(10,10);
-   glEnd();*/
    glBegin(GL_LINES);
    glVertex2i(x[0],y[0]);
    glVertex2i(x[1],y[1]);
@@ -40,7 +24,6 @@ void setPixel()
    glVertex2i(10,50);
    glVertex2i(50,50);
    glVertex2i(50,10);
-   //glVertex2i(10,10);
    glEnd();
    glFlush();
 }

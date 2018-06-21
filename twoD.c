@@ -48,8 +48,8 @@ int main(int argc, char **argv)
             printf("\nEnter translation values: \n");
             scanf("%d%d", &sx, &sy);
             for(i=0;i<v;i++) {
-                xt[i] = x[i]*sx;
-                yt[i] = y[i]*sy;
+                xt[i] = x[i]+sx;
+                yt[i] = y[i]+sy;
             }
             break;
         case 2:
