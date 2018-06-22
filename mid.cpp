@@ -30,7 +30,7 @@ void mpc()
            glVertex2i(-y,-x);
            glVertex2i(-y,x);
            glVertex2i(y,-x);
-           p=p+(2*x)+3;
+           p+=(2*x)+3;
        } else {
            ++x; 
            --y;
