@@ -34,7 +34,7 @@ int main(int argc, char** argv)
    for(i=0;i<2;i++)
     scanf("%f%f", &x[i],&y[i]);
    m = (y[1]-y[0])/(x[1]-x[0]);
-   for(i=0;i<3;i++){
+   for(i=0;i<2;i++){
        while( x[i]<10 || x[i]>50 || y[i]<10 || y[i]>50 )
        {
            if(x[i]<10)
@@ -49,12 +49,12 @@ int main(int argc, char** argv)
            }
            else if(y[i]>50)
            {
-               x[i] += (10 - x[i]) / m;
+               x[i] += (50 - y[i]) / m;
                y[i] = 50;
            }
            else if(y[i]<10)
            {
-               x[i] += (10 - x[i]) / m;
+               x[i] += (10 - y[i]) / m;
                y[i] = 10;
            }
        }
