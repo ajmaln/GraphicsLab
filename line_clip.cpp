@@ -58,9 +58,9 @@ int main(int argc, char** argv)
                y[i] = 10;
            }
        }
-       x[j] = x[i];
-       y[j] = y[i];
-       j++;
+       //x[j] = x[i];
+       //y[j] = y[i];
+       //j++;
    }
    glutInit(&argc, argv);
    glutInitWindowPosition(20,20);
