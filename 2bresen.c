@@ -3,8 +3,9 @@
   
 #include<GL/glut.h>
 #include<stdio.h>
+#include<math.h>
 
-float dx,dy,x0,y0,x1,y1,x,y,p;
+float dx,dy,x0,y_0,x1,y_1,x,y,p;
 
 void init(void)
 {
@@ -20,10 +21,10 @@ void BRESENHAMS()
    glPointSize(1.0);
    glBegin(GL_POINTS);
    x=x0;
-   y=y0;
+   y=y_0;
    glVertex2i(x,y);
-   dx=x1-x0;
-   dy=y1-y0;
+   dx=abs(x1-x0);
+   dy=abs(y_1-y_0);
    p=(2*dy)-dx;
    for(int i=0;i<dx;i++)
    {
@@ -35,7 +36,7 @@ void BRESENHAMS()
       else
       {
          glVertex2i(++x,++y);
-         p=p+(2*dy)-(2*dy);
+         p=p+(2*dy)-(2*dx);
       }
    }
    glEnd();
@@ -45,7 +46,7 @@ void BRESENHAMS()
 int main(int argc,char **argv)
 {
    printf("Enter the coordinates");
-   scanf("%f%f%f%f",&x0,&y0,&x1,&y1);
+   scanf("%f%f%f%f",&x0,&y_0,&x1,&y_1);
    glutInit(&argc,argv);
    glutInitWindowPosition(20,20);
    glutInitWindowSize(200,200);

@@ -22,8 +22,8 @@ void DDA()
    glBegin(GL_POINTS);
    x=x1;
    y=y1;
-   dx=x2-x1;
-   dy=y2-y1;
+   dx=abs(x2-x1);
+   dy=abs(y2-y1);
    if(dx>dy)
         step=dx;
    else
