@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<GL/glut.h>
 
-int i, j=0, m;
-float x[10], y[10];
+int i;
+float x[10], y[10], m;
 
 void init(){
    glClearColor(0.0,0.0,0.0,0.0);

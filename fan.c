@@ -25,7 +25,7 @@ void DrawGLScene()
 {
   glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
   glLoadIdentity();
-  glPushMatrix();
+  //glPushMatrix();
   glRotatef(spin,0.0,0.0,1.0);
   glColor3f(0.0f,0.0f,0.0f);
   glTranslatef(0.0f,0.0f,-6.0f);
@@ -34,7 +34,7 @@ void DrawGLScene()
   glRectf(-0.2,2.0,0.2,0.4);
   glRectf(0.4,-0.2,1.7,0.22);
   glRectf(-0.4,0.2,-1.7,-0.22);
-  glPopMatrix();
+  //glPopMatrix();
   glutSwapBuffers();
 }
 
@@ -46,7 +46,7 @@ void spinDisplay(void)
    glutPostRedisplay();
 }
 
-void reshape(int w,int h)
+/*void reshape(int w,int h)
 {
   glViewport(0,0,(GLsizei) w,(GLsizei) h);
   glMatrixMode(GL_PROJECTION);
@@ -54,7 +54,7 @@ void reshape(int w,int h)
   glOrtho(-50.0,50.0,-50.0,50.0,-1.0,1.5);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-}
+}*/
 
 void mouse(int button,int state,int x,int y)
 {
